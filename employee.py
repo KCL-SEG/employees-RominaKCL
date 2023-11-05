@@ -3,9 +3,8 @@
 
 
 class Employee:
-
-    def __init__(self, name, salary_contract, commission, fixed_commision, monthly_salary, work_hours, hourly_wage, fixed_bonus, contract_numbers, contract_commission):
-        self.name = name+" works on a "
+    def __init__(self, name_input, salary_contract, commission, fixed_commision, monthly_salary, work_hours, hourly_wage, fixed_bonus, contract_numbers, contract_commission):
+        self.name = name_input+" works on a "
         self.salary_Contract = salary_contract
         self.commission = commission
         self.fixed_comssion = fixed_commision
@@ -41,7 +40,8 @@ class Employee:
         return total
 
     def __str__(self):
-        self.name += ". Their total pay is "+str(self.get_pay())+"."
+        pay=self.get_pay()
+        self.name += ". Their total pay is "+str(pay)+"."
         return self.name
 
 
